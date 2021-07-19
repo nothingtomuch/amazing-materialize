@@ -16,20 +16,34 @@
     <h4>Lets connect</h4>
     <form action="#">
       <div class="input-field">
-        <input name="name" type="text">
+        <input name="name" required type="text">
         <label for="name">Your Name</label>
       </div>
       <div class="input-field">
-        <input  class="datepicker" name="name" type="text">
+        <input class="datepicker" required name="date" type="text">
         <label for="name">Date to connect</label>
+      </div>
+      <div class="input-field">
+        <button class="btn indigo">
+          Submit
+          <i class="material-icons right">
+            send
+          </i>
+        </button>
       </div>
     </form>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mat
-erialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
+erialize/1.0.0/js/materialize.min.js">
+  </script>
 
+  <script>
+    $(document).ready(()=>{
+    $(".datepicker").datepicker({
+      disableWeekends:true
+    })
+  })
   </script>
 </body>
 
